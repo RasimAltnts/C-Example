@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+
+    int sayi = 0;
+    printf("Lütfen Sayı Giriniz:");
+    scanf("%d", &sayi);
+
+    switch (sayi) {
+
+        case 1:
+            printf("Girdiniz Sayi Degeri -> 1\n");
+            break;
+        case 2:
+            printf("Girdiniz Sayi Deger -> 2\n");
+            break;
+        default:
+            printf("Girdiniz Sayı 1 ve 2 den farklı \n");
+            break;
+
+
+
+    }
+}

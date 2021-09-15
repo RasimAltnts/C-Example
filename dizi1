@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+
+    int sayiyal[5];
+
+    int i;
+
+    for (i = 0; i < 5; i++) {
+
+        sayiyal[i]= i * 3;
+
+
+    }
+
+    for (i=0; i <5 ; i++) {
+
+        printf("%d",sayiyal[i]);
+
+
+    }
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void carpimiYazdir(int, int);
+void herkesiSelamla(void);
+
+int main () {
+
+    int sayi1,sayi2;
+
+    printf("Lütfen Sayıları Giriniz:");
+    scanf("%d%d",&sayi1,&sayi2);
+
+    carpimiYazdir(sayi1,sayi2);
+
+    herkesiSelamla();
+
+    return 0;
+}
+
+
+void carpimiYazdir(int deger1,int deger2){
+
+    int carpim= deger1 * deger2;
+    printf("\n %d x %d = %d",deger1,deger2,carpim);
+}
+
+void herkesiSelamla() {
+
+    printf("\n SAMPIYON BEŞİKTAŞ");
+}

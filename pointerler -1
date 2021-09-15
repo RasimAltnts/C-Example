@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+    int *ptam, tam = 55;//*ptam pointer tanımlama
+    ptam=&tam;//ptam a tam ın adresini tanımlama 
+
+    printf("Tam = %d",tam);
+    printf("\nTam ın Adresi = %p",&tam);
+    printf("\nTam ın Adresi %p",ptam);
+    printf("\n*ptam ın degeri = %d",*ptam);
+
+    printf("\n--------------------\n");
+    *ptam = 25;//tam deger degiştirme
+
+    printf("Tam = %d",tam);
+    printf("\nTam ın Adresi = %p",&tam);
+    printf("\nTam ın Adresi %p",ptam);
+    printf("\n*ptam ın degeri = %d",*ptam);
+    
+    return 0;
+}

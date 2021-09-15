@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+#define Normal  "\x1B[0m"
+#define Kirmizi  "\x1B[31m"
+#define Yesil  "\x1B[32m"
+#define Sari  "\x1B[33m"
+#define Mavi  "\x1B[34m"
+#define Magenta  "\x1B[35m"
+#define Turkuaz  "\x1B[36m"
+#define Beyaz  "\x1B[37m"
+
+
+int main()
+{
+    printf("%s Normal \n",Normal);
+    printf("%s Kırmızı \n",Kirmizi);
+    printf("%s Yeşil \n",Yesil);
+    printf("%s Sarı \n",Sari);
+    printf("%s Mavi \n",Mavi);
+    printf("%s Magenta \n",Magenta);
+    printf("%s Turkuaz \n",Turkuaz);
+    printf("%s Beyaz \n",Beyaz);
+    return 0;
+}

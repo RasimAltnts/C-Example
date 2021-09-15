@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+
+    int *ptam,tam=13;
+    char *pkar,kar='c';
+    double *pdb,db=13.5;
+
+    ptam = &tam; pkar=&kar; pdb=&db;
+    printf("ptam = %p     pkar = %p    pdb = %p",ptam,pkar,pdb);
+    printf("\n*ptam = %d     *pkar = %c    *pdb = %f",*ptam,*pkar,*pdb);
+    ptam++;
+    pkar++;
+    pdb++;
+
+    printf("\n----------------------\n");
+    printf("ptam = %p     pkar = %p    pdb = %p",ptam,pkar,pdb);//int 2 , char 1 , double 8 , ileri gider
+
+    printf("\n-------------------------\n");
+    ptam--;
+    pkar--;
+    pdb--;
+    printf("ptam = %d     pkar = %d    pdb = %d",ptam,pkar,pdb);
+
+    printf("\n-----------------------\n");
+    ptam++;
+    pkar--;
+    pdb+=3;
+    printf("ptam = %d     pkar = %d    pdb = %d",ptam,pkar,pdb);
+
+
+
+    return 0;
+
+
+}

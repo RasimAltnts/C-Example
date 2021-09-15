@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main () {
+
+    int sure =0;
+    do{
+        printf("%d.dakika",sure);
+        sure+=10;
+        printf("\n");
+
+    }while (sure <=60);
+
+    return 0;
+}

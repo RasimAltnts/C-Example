@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+
+int main () {
+
+    int i,sayi;
+
+    for(sayi=0;sayi<50;sayi++) {
+        for (i=2;i<sayi;i++) {
+
+            if (sayi%i!=0) {
+
+                printf("%d",sayi);
+
+            }
+
+
+
+
+        }
+    }
+
+
+}

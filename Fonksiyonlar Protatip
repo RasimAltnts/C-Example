@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int Toplam_Yap(int, int);//Prototip
+
+int main () {
+
+
+    int sayi1;
+    int sayi2;
+
+    printf("Lütfen Sayıları Giriniz:");
+    scanf("%d %d",&sayi1,&sayi2);
+
+    int Toplam_Sonucu = Toplam_Yap(sayi1,sayi2);
+    printf("%d",Toplam_Sonucu);
+
+}
+
+
+int Toplam_Yap(int deger1, int deger2) {
+
+    return deger1+deger2;
+}

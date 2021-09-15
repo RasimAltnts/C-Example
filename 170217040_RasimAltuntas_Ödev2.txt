@@ -1,0 +1,137 @@
+#include <stdio.h>
+#include <memory.h>
+
+int main () {
+
+    char ad[15] = {};
+    char soyad[15] = {};
+    char mail[50] = "@marun.edu.tr";
+    char sifre[4] = "4852";
+    int i;
+    int j;
+    char user[4] = {};
+    int matris[2][2] = {7, 2, 4, 9};
+    int matris1[2][2] = {1, 0, 0, 7};
+    int toplammatris[2][2]={};
+    int toplam=0;
+    int toplammatris1[2][2]={};
+
+
+    printf("Lütfen Adınızı Giriniz:");
+    gets(ad);
+
+    printf("\nLütfen Soyadınızı Giriniz:");
+    gets(soyad);
+
+    strcat(ad, soyad);
+    strcat(ad, mail);
+    puts(ad);
+
+
+    for (i = 3; i>0; i--) {
+
+
+        printf("\nLütfen Cep Telefonunza Gelen Şifreyi Giriniz:");
+
+        gets(user);
+
+        if (strcmp(sifre, user)) {
+            printf("\n----------------------");
+
+            printf("\nYanlış Giriş Yaptınız");
+            printf("\nKalan Hakkınız :%d",i-1);
+
+        } else {
+
+            for (int a = 0; a < 2; a++) {
+                for (int b = 0; b < 2; b++) {
+
+                    printf("%d", matris[a][b]);
+                    printf("\t");
+
+                }
+
+                printf("\n");
+
+
+            }
+
+            printf("\n-------------------------\n");
+
+
+            printf("\n");
+
+            for (int k = 0; k < 2; k++) {
+                for (int t = 0; t < 2; t++) {
+
+                    printf("%d", matris1[t][k]);
+                    printf("\t");
+
+                }
+
+                printf("\n");
+
+            }
+
+            for (i = 0; i <2 ; ++i) {
+                for (j = 0; j <2 ; ++j) {
+
+                    toplam = matris[i][j]+matris1[i][j];
+                    toplammatris[i][j] = toplam;
+
+                    toplam=0;
+
+                }
+
+            }
+
+            printf("\nMatrislerin Toplamını Giriniz...!");
+
+            for (i = 0; i <2 ; ++i) {
+                for (j = 0; j <2 ; ++j) {
+
+                    printf("\n%d x %d elemanı giriniz:",i+1,j+1);
+                    scanf("%d",&toplammatris1[i][j]);
+
+                    if (toplammatris1[i][j]==toplammatris[i][j]){
+                        continue;
+
+                    }
+
+                    else{
+                        printf("\n-----------------------");
+                        printf("\nHatalı Girdiniz");
+                        printf("\nSistem Yoneticisine Basvurunuz...");
+                        return 0;
+                    }
+
+                }
+            }
+
+            printf("\n---------------------------\n");
+
+
+            printf("Hesabınız Aktifleştirildi..");
+
+            return 0;
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+}
+
+
+
+
+
+
+

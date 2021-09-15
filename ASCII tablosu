@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main () {
+
+    int x;
+
+    //printf("Sayıyı Giririniz:");
+    x = getchar();
+
+    if (x % 2 == 0) {
+        return 0;
+
+    }
+
+    if (x % 2 != 0)
+        printf("%d Sayıyı Çifttir",x);
+}

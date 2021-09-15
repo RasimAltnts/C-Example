@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+double ortalama(double dizi[], int n);
+
+int main (){
+
+    double a[5] = {1.1,2.2,3.3,4.4,5.5};
+    double o;
+
+    o = ortalama(a,5);
+    printf("Dizinin Ortalaması  = %1f\n",o);
+
+    return 0;
+
+}
+
+double ortalama(double dizi[], int n){
+
+    double *p,t=0.0;
+    int i;
+    int k;
+    //int c;
+
+
+    //double **dizi_ptr= &dizi;
+
+    p = dizi;
+
+    for (i = 0; i < n; ++i) {
+        t += *(p+i);
+        printf("%p",(p+i));
+    }
+
+    /*for (k = 0; k <n ; ++k) {
+        printf("%p",dizi_ptr[k]);
+
+    }*/
+
+    return (t/n);
+}

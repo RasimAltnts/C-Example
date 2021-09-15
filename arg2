@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdarg.h>
+
+int min_sayi(int n, ...);
+
+int main () {
+
+    printf("\n---------------------\n");
+
+    printf("En Küçük Sayı (7, 5,11,12,7,16,18,36):%d\n",min_sayi(7, 5,11,12,7,16,18,36));
+
+
+}
+
+int min_sayi(int n, ...) {
+
+    int a,i,sayi_1;
+    va_list sayi;
+    va_start(sayi,n);
+    sayi_1=va_arg(sayi, int);
+
+    for (i = 2; i <= n ; ++i) {
+        //a = va_arg(sayi, int);
+        if ((a = va_arg(sayi, int)) >= sayi_1){
+            sayi_1=a;
+        }
+    }
+
+    va_end(sayi);
+    return sayi_1;
+}
+

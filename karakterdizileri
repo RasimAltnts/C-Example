@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()  {
+    char dizi[6]={'s','i','n','i','f','\0'};
+    char dizi2[6]="sinif";
+    printf(dizi);
+    printf("\n");
+    printf(dizi2);
+    return 0;
+
+
+
+
+}

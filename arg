@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdarg.h>
+
+int toplama (int n, ...);
+
+int main () {
+
+    printf("Toplama(4, 5,15,16,25): %d",toplama(3, 5,15,16,25));
+    //printf("\nToplama (2, 5,7):%d",toplama(2 ,5,7));
+
+}
+
+
+int toplama (int n, ...){
+
+    int i,sonuc=0,a;
+
+    va_list ap;
+    va_start(ap, n);
+    for (i = 1; i <= n ; ++i) {
+        a=va_arg(ap, int);
+        sonuc+=a;
+        printf("%d\n",a);
+        //printf("%d\n",va_arg(ap, int)); Arg rastgele deger ataması
+    }
+
+    va_end(ap);
+    return sonuc;
+
+    {
+
+    }
+
+
+}

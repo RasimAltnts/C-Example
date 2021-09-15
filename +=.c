@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int main() {
+
+    int b=32;
+
+    b+=5;
+    printf("b sayısının degeri=%d",b);
+
+    return 0;
+
+}

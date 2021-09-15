@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+    srand(time(NULL));  // Bu  yazılmalı yoksa sürekli aynı değerleri atar
+    int dizi1[3][3], dizi2[3][3];
+    int topla, cikar, carp = 0;
+
+    //-3 3 aralığında random sayılar diziye atılıyor (-3 3 dahil olması için rand() % 6 - 3 yazılmalı)
+    for(int i=0; i<3; i++)
+        for(int j=0; j<3; j++){
+            dizi1[i][j] = rand() % 5 - 2;
+            dizi2[i][j] = rand() % 5 - 2;
+
+        }
+
+    printf("Dizi1\n");
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            printf("%3d ", dizi1[i][j]);  // Ekranda düzgün gözüksün diye 3 karakter olarak yazdırıldı (sayı 1 basamaklı ise önüne 2 boşluk koyar)
+        }
+        printf("\n");
+    }
+    printf("\nDizi2\n");
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            printf("%3d ", dizi2[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nToplama islemi\n");
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            topla = dizi1[i][j] + dizi2[i][j];
+            printf("%3d ", topla);
+        }
+        printf("\n");
+    }
+
+    printf("\nCikarma islemi\n");
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            cikar = dizi1[i][j] - dizi2[i][j];
+            printf("%3d ", cikar);
+        }
+        printf("\n");
+    }
+    printf("\nCarpma islemi\n");
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            for(int k=0; k<3; k++)
+                carp += dizi1[i][k] * dizi2[k][j];
+
+            printf("%3d ", carp);
+            carp = 0;
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+    system("pause");
+    return 0;
+}
